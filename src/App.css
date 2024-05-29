@@ -1,38 +1,107 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  width: 100pw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(1,182,184);
+  color: aliceblue;
+}
+
+.quiz-app {
+  width: 600px;
+  padding: 20px;
+  background-color: rgb(1,182,184);
+}
+.question-section {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question-section h2 {
+  margin: 10px 0px;
+  font-weight: 600;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.question-section p {
+  font-weight: 550;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .options {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+} */
+button {
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 1px;
+  border: 1px solid white;
+  background-color: rgb(1,182,184);
+  color: aliceblue;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+
+button:hover {
+  filter: brightness(1.2);
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation:animate__shakeXt; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
+
+}
+.timer {
+  margin-top: 20px;
+  margin-left: 5%;
+  font-size: 18px;
+  color: #000;
+}
+.timer span {
+  font-weight: 800;
+}
+.score-section {
+  text-align: center;
+}
+.score-section h2 {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.score-section button {
+  background-color: white;
+}
+.op{
+  border: 1px solid white;
+  padding: 5px;
+}
+li{
+  margin: 20px;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+@keyframes showText {
+  100% {
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+}
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
